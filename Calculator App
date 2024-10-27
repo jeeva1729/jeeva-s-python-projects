@@ -1,0 +1,60 @@
+#CalculatorApp      
+
+class calculator:
+    def __init__(self, x, y):
+        self.a=x
+        self.b=y
+        
+    def add(self):
+        add=self.a+self.b
+        print(f'addition: {add}')
+    def sub(self):    
+        sub=self.a-self.b
+        print(f'subtraction: {sub}')
+    def mul(self):
+        mul=self.a*self.b
+        print(f'multiplication: {mul}')
+    def div(self):
+        if self.b==0:
+           print('Infinite Number')
+        else:   
+           div=self.a/self.b
+           print(f'division: {div}')
+    def rem(self):
+        rem=self.a%self.b
+        print(f'remainder: {rem}')
+        
+def main():
+    while True:
+        x=int(input('Enter the value of x:'))
+        y=int(input('Enter the value of y:'))
+        obj=calculator(x, y)
+        print('Menu:')
+        print('1. Addition')
+        print('2. Subtraction')
+        print('3. Multiplication')
+        print('4. Division')
+        print('5. Remainder')
+        print('6. Exit')
+        choice=input('Enter a value between 1 to 6:')
+        if choice=='1':
+            obj.add()
+        elif choice=='2':
+            obj.sub()
+        elif choice=='3':
+            obj.mul()
+        elif choice=='4':
+            obj.div()
+        elif choice=='5':
+            obj.rem()
+        elif choice=='6':
+            print('Exiting the App')
+            break
+        else:
+            print('Invalid input. Please try again')
+            
+if __name__=='__main__':
+   main()
+          
+        
+        
